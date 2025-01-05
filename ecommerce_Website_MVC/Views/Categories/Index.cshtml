@@ -1,0 +1,50 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+<section id="categories" class="section-p1">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Categories</h2>
+        <p class="text-muted">Discover our new collection</p>
+    </div>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="text-center mb-4">
+            <a class="btn btn-primary" asp-controller="Admin" asp-action="Dashboard">Go to Dashboard</a>
+        </div>
+    }
+
+    <!-- Use fewer columns for wider cards -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-4">
+        @foreach (var category in Model)
+        {
+            <div class="col-4">
+                <div class="card h-100 shadow-sm">
+                    <!-- Category Title -->
+                    <div class="card-header bg-white border-0 text-center">
+                        <h5 class="card-title fw-bold">@category.nomCategorie</h5>
+                    </div>
+
+                    <!-- Image Grid -->
+                    <div class="card-body">
+                        <div class="image-grid d-flex flex-wrap">
+                            @foreach (var imageUrl in category.imageUrls)
+                            {
+                                <div class="grid-image" style="width: 50%; height: 150px; background-size: cover; background-position: center; background-image: url('@imageUrl');"></div>
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Footer with View Products button -->
+                    <div class="card-footer bg-white border-0 text-center">
+                        <a asp-controller="Produits" asp-action="Index" asp-route-idCategorie="@category.id" class="btn btn-outline-success btn-sm">
+                            View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
