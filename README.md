@@ -29,6 +29,16 @@ This is an e-commerce web application built using the **ASP.NET Core MVC** frame
 
   ![Register](./ecommerce_Website_MVC/Screenshots/Register.png)
 
+## Architecture
+
+The project follows a standard **ASP.NET Core MVC** architecture pattern with the following components:
+
+- **Models**: Represents the data and business logic of the application.
+- **Views**: Defines the user interface.
+- **Controllers**: Handles user input and interactions, updates models, and selects views to render.
+
+![Architecture MVC](./ecommerce_Website_MVC/Screenshots/ArchitectureMVC.png)
+
 ## Technologies Used
 
 - **ASP.NET Core MVC** for backend and frontend.
