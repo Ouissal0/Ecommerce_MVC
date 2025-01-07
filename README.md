@@ -7,11 +7,27 @@ This is an e-commerce web application built using the **ASP.NET Core MVC** frame
 - **Products**:  
   Users can view a list of available products with their details (name, price, description, etc.).
 
+  ![Products](./ecommerce_Website_MVC/Screenshots/Products.png)
+
+- **Product Details**:  
+  Users can view detailed information about each product.
+
+  ![Product Details](./ecommerce_Website_MVC/Screenshots/Details.png)
+
+- **Categories**:  
+  Users can browse products by category.
+
+  ![Categories](./ecommerce_Website_MVC/Screenshots/Categories.png)
+
 - **Shopping Cart Management**:  
   Users can add products to the shopping cart, update quantities, and remove items.
 
+  ![Shopping Cart](./ecommerce_Website_MVC/Screenshots/Panier.png)
+
 - **User Authentication**:  
   Users can register, log in, and log out. Authentication is implemented using **ASP.NET Identity**.
+
+  ![Register](./ecommerce_Website_MVC/Screenshots/Register.png)
 
 ## Technologies Used
 
